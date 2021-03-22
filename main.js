@@ -7,14 +7,14 @@ function processForm(event) {
     let name = validate(document.getElementById("name").value);
     let drink = validate(document.getElementById("drink").value);
     let food = validate(document.getElementById("food").value);
+    let location = document.getElementById("eat-in").value;
 
     if (valid) {
-        console.log("Name: "+name);
-        console.log("Drink: "+drink);
-        console.log("Food: "+food);
+        console.log("Name: "+name+", drink: "+drink+", food: "+food+", location: "+location);
         document.getElementById("name").value = "";
         document.getElementById("drink").value = "";
         document.getElementById("food").value = "";
+        document.getElementById("eat-in").value = "";
         alert("Response processed (see dev console)");
     } else {
         alert("A text box is empty");

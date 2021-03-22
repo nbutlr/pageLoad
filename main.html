@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>JS Form Demo</title>
     <script src="main.js"></script>
 </head>
 <body onload="pageLoad()">
@@ -16,6 +16,12 @@
         </div>
         <div>
             <label for="food">Food Order:</label><input type="text" id="food">
+        </div>
+        <div>
+            <input type="radio" id="eat-in" name="location" value="eat-in">
+            <label for="eat-in">Eating in?</label>
+            <input type="radio" id="takeaway" name="location" value="takeaway">
+            <label for="takeaway">Or takeaway?</label>
         </div>
         <div>
             <input type="submit" value="Place order">
