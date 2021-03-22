@@ -4,10 +4,10 @@ function pageLoad() {
 function processForm(event) {
     event.preventDefault();
     valid = true;
-    let name = validate(document.getElementById("name").value);
-    let drink = validate(document.getElementById("drink").value);
-    let food = validate(document.getElementById("food").value);
-    let location = document.getElementById("eat-in").value;
+    let name = validate(document.getElementById("name").value,0);
+    let drink = validate(document.getElementById("drink").value,0);
+    let food = validate(document.getElementById("food").value,0);
+    let location = validate(document.getElementById("eat-in").value,1);
 
     if (valid) {
         console.log("Name: "+name+", drink: "+drink+", food: "+food+", location: "+location);
@@ -20,11 +20,13 @@ function processForm(event) {
         alert("A text box is empty");
     }
 }
-function validate(string) {
-    if (string.length === 0) {
-        valid = false;
-    } else {
-        return string;
+function validate(string,type) {
+    if (type===0) {
+        if (string.length === 0) {
+            valid = false;
+        } else {
+            return string;
+        }
     }
 }
 let valid = true;
